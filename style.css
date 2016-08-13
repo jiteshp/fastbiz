@@ -212,6 +212,36 @@ table {
   padding-left: 15px;
   padding-right: 15px;
 }
+.flag {
+  margin-bottom: 30px;
+  display: table;
+  width: 100%;
+}
+.flag:last-child {
+  margin-bottom: 0;
+}
+.flag-image,
+.flag-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.flag-bottom .flag-image,
+.flag-bottom .flag-body {
+  vertical-align: bottom;
+}
+.flag-top .flag-image,
+.flag-top .flag-body {
+  vertical-align: top;
+}
+.flag-image {
+  padding-right: 30px;
+}
+.flag-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+}
 .section {
   margin-bottom: 30px;
   width: 100%;
@@ -228,9 +258,6 @@ pre,
 .wpcf7 {
   background-color: #f0f1f5;
   padding: 30px !important;
-}
-.double-padded {
-  padding: 60px !important;
 }
 .row {
   margin-left: -30px;
@@ -714,7 +741,7 @@ h3,
 }
 ol,
 ul {
-  list-style: decimal-leading-zero;
+  list-style: decimal;
   margin-left: 30px;
 }
 ol.features li,
@@ -1081,6 +1108,9 @@ textarea {
   border-bottom: solid 1px #eee;
   padding: 60px 0;
 }
+.entry-comments:last-child {
+  border-bottom: 0;
+}
 #comments-title {
   border-bottom: dotted 1px #eee;
   margin-bottom: 30px;
@@ -1235,14 +1265,6 @@ textarea {
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-.widget ul,
-.widget li {
-  list-style: none;
-  margin-left: 0;
-}
-.widget li li {
-  padding-left: 30px;
-}
 .widget a {
   border-bottom: 0;
   color: #333;
@@ -1267,6 +1289,14 @@ textarea {
     float: right;
     width: 25%;
   }
+}
+#sidebar ul,
+#sidebar li {
+  list-style: none;
+  margin-left: 0;
+}
+#sidebar li li {
+  padding-left: 30px;
 }
 #sidebar-footer {
   background-color: #123;
@@ -1345,6 +1375,12 @@ textarea {
   position: absolute;
   top: 0;
   width: 100%;
+}
+@media (min-width: 992px) {
+  .home.page .parent {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
 }
 .home.page .parent .entry-title {
   font-weight: bold;

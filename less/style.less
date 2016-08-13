@@ -107,6 +107,34 @@
 	padding-right: @grid-gutter / 2;
 }
 
+.flag {
+	.block-element( @base-line-height );
+	display: table;
+	width: 100%;
+}
+	
+.flag-image, .flag-body {
+	display: table-cell;
+	vertical-align: middle;
+	
+	.flag-bottom & {
+		vertical-align: bottom;
+	}
+	
+	.flag-top & {
+		vertical-align: top;
+	}
+}
+
+.flag-image {
+	padding-right: @base-line-height;
+	
+	img {
+		.aligncenter;
+		max-width: none;
+	}
+}
+
 .section {
 	.block-element( @base-line-height );
 	width: 100%;
@@ -115,10 +143,6 @@
 .highlight-block {
 	background-color: @highlight-bg-color;
 	padding: @base-line-height !important;
-}
-
-.double-padded {
-	padding: @base-line-height * 2 !important;
 }
 
 .row {
@@ -356,7 +380,7 @@ h4, .h4 {
 }
 
 ol, ul {
-	list-style: decimal-leading-zero;
+	list-style: decimal;
 	margin-left: @base-line-height;
 	
 	&.features {
@@ -752,6 +776,10 @@ textarea {
 .entry-comments {
 	border-bottom: solid 1px @border-color;
 	padding: ( @base-line-height * 2 ) 0;
+	
+	&:last-child {
+		border-bottom: 0;
+	}
 }
 
 #comments-title {
@@ -915,15 +943,6 @@ textarea {
 		padding-bottom: @base-line-height / 2;
 	}
 	
-	ul, li {
-		list-style: none;
-		margin-left: 0;
-	}
-	
-	li li {
-		padding-left: @base-line-height;
-	}
-	
 	a {
 		border-bottom: 0;
 		color: @primary-text-color;
@@ -956,6 +975,15 @@ textarea {
 		border-top: 0;
 		float: right;
 		width: 25%;
+	}
+	
+	ul, li {
+		list-style: none;
+		margin-left: 0;
+	}
+	
+	li li {
+		padding-left: @base-line-height;
 	}
 }
 
@@ -1045,6 +1073,11 @@ textarea {
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: white;
+		
+		@media( min-width: @screen-md ) {
+			padding-bottom: @base-line-height;
+			padding-top: @base-line-height;
+		}
 		
 		.entry-title {
 			.title;
