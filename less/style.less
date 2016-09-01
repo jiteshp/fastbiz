@@ -953,8 +953,20 @@ textarea {
 		margin-left: 0;
 	}
 	
-	li li {
-		padding-left: @base-line-height;
+	li {
+		border-bottom: dotted 1px @border-color;
+		margin-bottom: @base-line-height / 2;
+		padding-bottom: @base-line-height / 2;
+		
+		&:last-child {
+			border-bottom: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	
+		li {
+			padding-left: @base-line-height;
+		}
 	}
 }
 

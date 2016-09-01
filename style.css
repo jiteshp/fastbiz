@@ -1253,6 +1253,16 @@ textarea {
   list-style: none;
   margin-left: 0;
 }
+#sidebar li {
+  border-bottom: dotted 1px #eee;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+#sidebar li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 #sidebar li li {
   padding-left: 30px;
 }
